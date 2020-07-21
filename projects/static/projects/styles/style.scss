@@ -13,7 +13,8 @@ $links-color: rgba(0, 0, 0, 80%);
   align-items: $align;
 }
 
-@import "./global.scss";
+@import "./global";
+@import "./projects";
 @import "./navSection";
 @import "./hero";
 @import "./about";

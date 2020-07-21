@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'projects/styles/style.css'%}" />
+    <title>MEIAM | Web developer</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <nav>
+        <h2>
+          <a id="logo" href="{% url 'projects-home' %}"><span>ME</span>IAM</a>
+        </h2>
+        <ul class="nav-links">
+          <li><a href="{% url 'projects-home' %}#about">About</a></li>
+          <li><a href="{% url 'projects-home' %}#contacts">Contacts</a></li>
+          <li><a href="{% url 'projects-projects' %}">Projects</a></li>
+        </ul>
+        <div class="burger">
+          <span class="line1"></span>
+          <span class="line2"></span>
+          <span class="line3"></span>
+        </div>
+      </nav>
+    </header>
+
+    {% block content %} {% endblock content %}
+
+    <footer>
+      <div class="footer-div">
+        <h1 class="footer-logo">MEIAM &copy; 2020</h1>
+        <ul class="social-links">
+          <li>
+            <a href="https://twitter.com/martin_eden_iam"
+              ><img
+                class="twitter-icon"
+                src="{% static 'projects/icons/twitter-social.svg'%}"
+                alt="twitter-social"
+            /></a>
+          </li>
+          <li>
+            <a href="https://t.me/martinedeniam"
+              ><img
+                class="telegram-icon"
+                src="{% static 'projects/icons/telegram-social.svg'%}"
+                alt="telegram-social"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script src="{% static 'projects/app.js'%}"></script>
+  </body>
+</html>
