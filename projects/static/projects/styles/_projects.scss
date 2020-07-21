@@ -1,4 +1,4 @@
-.projects-posts {
+#projects-posts {
   padding-top: 10vh;
   min-height: 90vh;
   margin: auto;
@@ -6,23 +6,14 @@
   overflow: hidden;
 
   h2 {
-    text-align: center;
     margin-bottom: 2rem;
     color: #b44d4d;
+    text-align: center;
   }
 
   p {
     margin: 2rem 0;
-  }
-
-  a {
     font-size: 2rem;
-    margin-top: 2rem;
-    text-align: center;
-  }
-
-  a:hover {
-    color: rgb(71, 68, 68);
   }
 }
 
@@ -32,12 +23,40 @@
   white-space: pre-wrap;
   word-break: break-all;
   white-space: normal;
-  height: 40rem;
+  min-height: 40rem;
   width: 50%;
   border-radius: 2rem;
-  padding: 3rem;
   margin: 5rem;
-  @include flex(column, space-evenly, left);
+  @include flex(row, center, center);
+  padding: 5rem;
+  flex-wrap: wrap;
+}
+
+.post-text {
+  flex: 1 1 20rem;
+  padding: 0rem 3rem;
+  @include flex(column, space-between, center);
+}
+
+#project-a {
+  flex: 1 1 20rem;
+  margin: auto;
+  @include flex(row, center, center);
+}
+
+#project-img {
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  padding: 2rem 2rem 0rem 2rem;
+  width: 250px;
+  box-shadow: 0 2px 2px rgb(93, 93, 93);
+  border-radius: 2rem;
+}
+
+#project-img:hover {
+  opacity: 0.6;
+  transform: translateX(2px);
 }
 
 @media screen and (max-width: 600px) {
@@ -48,15 +67,8 @@
       font-size: 2rem;
       margin: 1rem 0;
     }
-
-    // a {
-    //   font-size: 2rem;
-    //   margin-top: 2rem;
-    //   text-align: center;
-    // }
-
-    a:hover {
-      color: rgb(71, 68, 68);
+    h2 {
+      font-size: 2rem;
     }
   }
 }

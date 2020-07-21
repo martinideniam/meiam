@@ -9,8 +9,9 @@ class projectsPost(models.Model):
     title = models.CharField(max_length=50)
     url = models.URLField()
     comment = models.TextField()
+    picture = models.ImageField(
+        upload_to="gallery", null=True, blank=True)
     date_posted = models.DateTimeField(default=timezone.now)
-    author = models.ForeignKey(to=User, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.title

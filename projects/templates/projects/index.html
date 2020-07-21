@@ -308,4 +308,19 @@
       <button type="submit">Submit</button>
     </form>
   </section>
+  {% if projects %}
+    <div id="projects-posts">
+    {% for project in projects %}
+    <div class="project-post">
+      <div class="post-text">
+        <h2>{{project.title}}</h2>
+        <p>{{project.comment}}</p>
+      </div>
+      <a id="project-a" href="{{project.url}}"
+        ><img id="project-img" src="{{project.picture.url}}" alt="project img"
+      /></a>
+    </div>
+    {% endfor %}
+    </div>
+  {% endif %}
 {% endblock content %}
