@@ -20,9 +20,9 @@
 .project-post {
   //   border: solid black 2px;
   box-shadow: 0 5px 10px rgb(93, 93, 93);
-  white-space: pre-wrap;
-  word-break: break-all;
-  white-space: normal;
+  // white-space: pre-wrap;
+  // word-break: break-all;
+  // white-space: normal;
   min-height: 40rem;
   width: 50%;
   border-radius: 2rem;
@@ -48,7 +48,6 @@
   text-align: center;
   background-size: cover;
   background-position: center;
-  padding: 2rem 2rem 0rem 2rem;
   width: 250px;
   box-shadow: 0 2px 2px rgb(93, 93, 93);
   border-radius: 2rem;
@@ -59,7 +58,7 @@
   transform: translateX(2px);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
   .project-post {
     width: 80%;
 
